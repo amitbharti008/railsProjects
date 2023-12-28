@@ -15,8 +15,12 @@ module AdminPanel
       Rails.application.routes.default_url_options[:host] = ENV['PRODUCTION_HOST'] || 'localhost:3000'
     end
 
-    Bundler.require(*Rails.groups)
-    Dotenv::Railtie.load
+    # Check if Dotenv is defined before trying to load it
+    if defined?(Dotenv::Railtie)
+      Bundler.require(*Rails.groups)
+      Dotenv::Railtie.load
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
