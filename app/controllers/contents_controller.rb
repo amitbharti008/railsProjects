@@ -18,6 +18,12 @@ class ContentsController < ApplicationController
         render json: { error: "Content not found" }, status: :not_found
       end
     end
+
+    def error
+
+      DoesntExist.some_method
+    
+    end
   
     private
   
