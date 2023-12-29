@@ -67,5 +67,7 @@ gem 'mini_magick', '~> 4.11'
 gem 'carrierwave'
 gem 'dotenv-rails', groups: [:development, :test]
 
+
+# active_admin theme
 gem 'active_admin_flat_skin'
 gem 'font-awesome-rails'
