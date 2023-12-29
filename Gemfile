@@ -59,10 +59,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'activeadmin', '~> 3.2'
 
 gem 'devise'
-gem 'mysql2', '~> 0.5'
+gem 'mysql2', '~> 0.5.5'
 
 gem 'mini_magick', '~> 4.11'
 
 # Gemfile
 gem 'carrierwave'
 gem 'dotenv-rails', groups: [:development, :test]
+
+
+# active_admin theme
+gem 'active_admin_flat_skin'
+gem 'font-awesome-rails'
