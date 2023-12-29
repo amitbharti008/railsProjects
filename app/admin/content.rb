@@ -7,10 +7,10 @@ ActiveAdmin.register Content do
         selectable_column
         id_column
         column :name
-        column :description
         column :image do |content|
           image_tag(content.image.url, width: 50, height: 50) if content.image.present?
         end
+        column :description
         actions
       end
   
@@ -19,19 +19,18 @@ ActiveAdmin.register Content do
           f.input :name
           f.input :description
           f.input :image, as: :file
-        end
+       end
         f.actions
       end
 
       show do
         attributes_table do
           row :name
-          row :description
           row :image do |content|
-            image_tag(content.image.url) if content.image.present?
+            image_tag(content.image.url, style: 'max-width: 100%; max-height: 300px;') if content.image.present?
           end
+          row :description
         end
-        active_admin_comments
       end
   end
   
